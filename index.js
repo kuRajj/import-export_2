@@ -1,8 +1,13 @@
 import './index.css';
-document.querySelector('.cookie-consent').style.display = localStorage.getItem('style.display');
 const cookieBtn = document.querySelector('.cookie-consent__button');
+const cookieConsent = document.querySelector('.cookie-consent');
+const ItemInlocalStorage = localStorage.getItem('visibility');
+
+if(ItemInlocalStorage) {
+    cookieConsent.classList.add(ItemInlocalStorage);
+}
 
 cookieBtn.addEventListener('click', () => {
-    localStorage.setItem('style.display', 'none');
-    document.querySelector('.cookie-consent').style.display = localStorage.getItem('style.display');
+    localStorage.setItem('visibility', 'hide');
+    cookieConsent.classList.add(localStorage.getItem('visibility'));
 })
