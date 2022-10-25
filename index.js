@@ -11,3 +11,4 @@ cookieBtn.addEventListener('click', () => {
     localStorage.setItem('visibility', 'hide');
     cookieConsent.classList.add(localStorage.getItem('visibility'));
 })
+const name = 'sasha';
