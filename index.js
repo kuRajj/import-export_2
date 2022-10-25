@@ -14,3 +14,4 @@ cookieBtn.addEventListener('click', () => {
 const name = 'sasha';
 console.log(name);
 const age = 29;
+console.log(name, age);
